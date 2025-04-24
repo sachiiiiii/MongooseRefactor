@@ -9,7 +9,7 @@ dotenv.config();
 // do we still need this after moving routes? Yes, for the seed route
 // import Fruit from './models/fruit.mjs'; // points to the schema in models
 
-import Fruits from "./routes/fruits.mjs"; // points to the routes
+import Fruits from "./routes/fruits.mjs"; // points to the routes in the routes folder
 
 const app = express();
 const port = process.env.PORT || 3000;
