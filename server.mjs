@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 // initialize dotenv so it can be used
 dotenv.config();
 
+import cors from 'cors';
+
 // do we still need this after moving routes? Yes, for the seed route
 // import Fruit from './models/fruit.mjs'; // points to the schema in models
 
@@ -17,6 +19,9 @@ const port = process.env.PORT || 3000;
 // Middleware 
 app.use(express.urlencoded());
 app.use(express.json());
+
+// CORS
+app.use(cors());
 
 // Mongoose Connection: connecting to the database in Compass
 mongoose.connect(process.env.ATLAS_URI);
